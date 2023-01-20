@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Interactive Cookie Hint</title>
+
+  <!-- JQUERY IS REQUIRED -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- load the plugin/script -->
+  <script src="./jquery-interactive-cookie-hint.js" defer></script>
+</head>
+
+<body>
+
+  <div>Say hey!</div>
+  <!-- the plugin needs an id to interact with, best with an empty div -->
+
+  <script>
+    jQuery(document).ready(function($) {
+      $.interactiveCookieHint({
+        bottom: true, // position of cookie hint
+        html: "<strong>About Cookies on this site</strong> - This site uses Cookies to improve your online experience. By continuing to use this site without changing your cookie preferences we will assume that you are agreeing to our use of cookies. For more information, or to change your cookie preferences, visit our cookie policy.",
+        button: true, // false
+        buttonHtml: "<strong>close</strong>",
+        backgroundColor: "#4286f4",
+        color: "#ffffff",
+        rowPadding: "0.5em",
+        leftCellPadding: "0.5em 2em 0.5em 2em",
+        rightCellPadding: "0.5em"
+      });
+    });
+  </script>
+
+</body>
+
+</html>
